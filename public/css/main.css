@@ -1,0 +1,29 @@
+.navbar-inverse {
+    background-color: #5CB85C;
+    border-color: #00EA00;
+}
+
+body {
+    font-family: "Ubuntu";
+    font-weight: 500;
+}
+
+a {
+    color: #000000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #999;
+}
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-nav > li > a:hover {
+    text-decoration: underline;
+}
