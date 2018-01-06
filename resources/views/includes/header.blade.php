@@ -22,6 +22,7 @@
                 <li><a href="#">Замовлення</a></li>
                 <li><a href="#">Витрати</a></li>
                 <li><a href="#">Статистика</a></li>
+                <li><a href="#">Товар</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->
