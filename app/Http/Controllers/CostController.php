@@ -48,7 +48,9 @@ class CostController extends Controller {
 
 	public function update( Cost $cost, Request $request ) {
 
+		if ( $request->getMethod() == 'POST' ) {
 
+			$user = Auth::user();
 
 			$this->validate( $request, [
 				'title'    => 'required|min:2',
