@@ -20,4 +20,8 @@ class Cost extends Model
 
 		$costs->save();
     }
+
+	public static function deleteItem( $id ) {
+		Cost::where('id', '=', $id)->delete();
+    }
 }

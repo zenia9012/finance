@@ -11,12 +11,12 @@ class CostController extends Controller {
 
 		if ( $request->getMethod() == 'POST' ) {
 
-			$this->validate($request, [
-				'title' => 'required|min:2',
+			$this->validate( $request, [
+				'title'    => 'required|min:2',
 				'category' => 'required|min:2',
-				'price' => 'required',
+				'price'    => 'required',
 
-			]);
+			] );
 
 			$title    = $request->input( 'title' );
 			$category = $request->input( 'category' );
@@ -38,4 +38,9 @@ class CostController extends Controller {
 		return view( 'costs.list', compact( 'costs' ) );
 	}
 
+	public function delete( Cost $cost ) {
+		Cost::deleteItem( $cost->id );
+
+		return redirect( route( 'list_cost' ) );
+	}
 }

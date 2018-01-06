@@ -21,3 +21,4 @@ Route::get('/logout', 'HomeController@logout')->name('logout');
 
 Route::any('/costs/create', 'CostController@create')->name('create_cost');
 Route::any('/costs', 'CostController@list')->name('list_cost');
+Route::any('/costs/delete/{cost}', 'CostController@delete')->name('delete_cost');

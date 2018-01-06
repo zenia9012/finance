@@ -29,7 +29,7 @@
                                 <td>{{ $cost->price }}</td>
                                 <td>{{ \Carbon\Carbon::parse($cost->created_at)->format('d-F-Y')}}</td>
                                 <td><a href="#" class="btn btn-warning btn-sm">Редагувати</a></td>
-                                <td><a href="#" class="btn btn-danger btn-sm">Видалити</a></td>
+                                <td><a href="/costs/delete/{{ $cost->id }}" class="btn btn-danger btn-sm">Видалити</a></td>
                             </tr>
                         @endforeach
                     </table>
