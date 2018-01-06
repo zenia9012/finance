@@ -20,3 +20,4 @@ Route::get('/logout', 'HomeController@logout')->name('logout');
 // costs route
 
 Route::any('/costs/create', 'CostController@create')->name('create_cost');
+Route::any('/costs', 'CostController@list')->name('list_cost');

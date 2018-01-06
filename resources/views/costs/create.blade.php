@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Витрати</div>
+                <div class="panel-heading text-center"><h3>Витрати Створити</h3></div>
             </div>
             <form action="" class="form-horizontal" id="user-data" method="post">
                 {{csrf_field()}}
@@ -59,7 +59,7 @@
                         @endisset
                     </div>
                     <div class="form-gorup text-center">
-                        <button type="submit" class="btn submit">Додати</button>
+                        <button type="submit" class="btn btn-success">Додати</button>
                     </div>
                 </div>
             </form>

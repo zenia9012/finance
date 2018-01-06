@@ -20,7 +20,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
                 <li><a href="#">Замовлення</a></li>
-                <li><a href="#">Витрати</a></li>
+                <li><a href="{{ route('list_cost') }}">Витрати</a></li>
                 <li><a href="#">Статистика</a></li>
                 <li><a href="#">Товар</a></li>
             </ul>
