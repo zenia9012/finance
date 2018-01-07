@@ -23,3 +23,12 @@ Route::any('/costs/create', 'CostController@create')->name('create_cost');
 Route::any('/costs', 'CostController@list')->name('list_cost');
 Route::any('/costs/delete/{cost}', 'CostController@delete')->name('delete_cost');
 Route::any('/costs/update/{cost}', 'CostController@update')->name('update_cost');
+
+
+//products route
+
+Route::any('product', 'ProductController@list')->name('product_list');
+Route::any('product/create', 'ProductController@create')->name('product_create');
+Route::any('product/confirm', 'ProductController@confirm')->name('product_confirm');
+Route::any('product/update/{product}', 'ProductController@update')->name('product_update');
+Route::any('product/delete/{product}', 'ProductController@delete')->name('product_delete');
