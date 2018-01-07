@@ -20,24 +20,11 @@
                         <li class="list-group-item">{{ $product->notes }}</li>
                     </ul>
                 </div>
-                <div class="table">
-
-                    <table class="table table-hover table-bordered table-striped">
-
-                        <tr>
-                            <td>{{ $product->id }}</td>
-                            <td>photo</td>
-                            <td>{{ $product->title }}</td>
-                            <td>{{ $product->category }}</td>
-                            <td>{{ $product->price_our }}</td>
-                            <td>{{ $product->price_sell }}</td>
-                            <td>{{ $product->material }}</td>
-                            <td>{{ $product->size }}</td>
-                            <td>{{ $product->notes }}</td>
-                            <td><a href="/product/update/{{ $product->id }}" class="btn btn-warning btn-sm">Редагувати</a></td>
-                            <td><a href="/product/delete/{{ $product->id }}" class="btn btn-danger btn-sm">Видалити</a></td>
-                        </tr>
-                    </table>
+                <div class="buttons">
+                    <a href="{{route('product_list')}}" class="btn btn-success">Підтвердити</a>
+                    <a href="{{route('product_update')}}" class="btn btn-warning">Редагувати</a>
+                    <a href="{{route('product_delete')}}" class="btn btn-danger">Видалити</a>
+                </div>
                 </div>
             </div>
         </div>

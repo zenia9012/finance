@@ -25,4 +25,8 @@ class Product extends Model
 	public static function getLatest(  ) {
 		return Product::orderBy('id', 'desc')->first();
     }
+
+	public static function deleteItem( $id ) {
+		Product::where('id', '=', $id)->delete();
+	}
 }

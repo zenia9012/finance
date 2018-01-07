@@ -57,8 +57,11 @@ class ProductController extends Controller
 		return view('product.list', compact('products'));
     }
 
-	public function delete(  ) {
+	public function delete( Product $product ) {
 
+		Product::deleteItem( $product->id );
+
+		return redirect( route('product_list') );
     }
 
 	public function update(  ) {

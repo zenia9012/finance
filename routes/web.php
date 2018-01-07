@@ -30,3 +30,5 @@ Route::any('/costs/update/{cost}', 'CostController@update')->name('update_cost')
 Route::any('product', 'ProductController@list')->name('product_list');
 Route::any('product/create', 'ProductController@create')->name('product_create');
 Route::any('product/confirm', 'ProductController@confirm')->name('product_confirm');
+Route::any('product/update', 'ProductController@update')->name('product_update');
+Route::any('product/delete/{product}', 'ProductController@delete')->name('product_delete');
