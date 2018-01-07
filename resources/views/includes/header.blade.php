@@ -22,6 +22,7 @@
                 <li><a href="#">Замовлення</a></li>
                 <li><a href="{{ route('product_list') }}">Товар</a></li>
                 <li><a href="{{ route('list_cost') }}">Витрати</a></li>
+                <li><a href="{{ route('client_list') }}">Клієнти</a></li>
                 <li><a href="#">Статистика</a></li>
             </ul>
 

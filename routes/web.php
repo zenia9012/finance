@@ -35,3 +35,8 @@ Route::any('product/delete/{product}', 'ProductController@delete')->name('produc
 
 
 //client route
+
+Route::any('client', 'ClientController@list')->name('client_list');
+Route::any('client/create', 'ClientController@create')->name('client_create');
+Route::any('client/update/{client}', 'ClientController@update')->name('client_update');
+Route::any('client/delete/{client}', 'ClientController@delete')->name('client_delete');
