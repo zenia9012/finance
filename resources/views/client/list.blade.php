@@ -13,6 +13,9 @@
                         <tr>
                             <th width="2%">#</th>
                             <th>Ім'я</th>
+                            <th>Email</th>
+                            <th>Телефон</th>
+                            <th>Facebook</th>
                             <th>Місто</th>
                             <th>Останнє замовлення</th>
                             <th>Нотатки</th>
@@ -24,6 +27,9 @@
                             <tr>
                                 <td>{{ $client->id }}</td>
                                 <td>{{ $client->name }}</td>
+                                <td>{{ $client->email }}</td>
+                                <td>{{ $client->phone }}</td>
+                                <td>{{ $client->facebook }}</td>
                                 <td>{{ $client->city }}</td>
                                 <td>{{ $client->last_order }}</td>
                                 <td>{{ $client->notes }}</td>
