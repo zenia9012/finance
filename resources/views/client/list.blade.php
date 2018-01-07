@@ -5,9 +5,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading text-center"><h3>Товари Список</h3></div>
+                    <div class="panel-heading text-center"><h3>Клієнти Список</h3></div>
                 </div>
-                <p><a href="{{route('product_create')}}" class="btn btn-success">Створити новий товар</a></p>
+                <p><a href="{{route('client_create')}}" class="btn btn-success">Створити нового клієнта</a></p>
                 <div class="table">
                     <table class="table table-hover table-bordered table-striped">
                         <tr>
