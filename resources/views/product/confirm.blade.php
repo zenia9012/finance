@@ -22,9 +22,8 @@
                 </div>
                 <div class="buttons">
                     <a href="{{route('product_list')}}" class="btn btn-success">Підтвердити</a>
-                    <a href="{{route('product_update')}}" class="btn btn-warning">Редагувати</a>
-                    <a href="{{route('product_delete')}}" class="btn btn-danger">Видалити</a>
-                </div>
+                    <a href="/product/update/{{ $product->id }}" class="btn btn-warning">Редагувати</a>
+                    <a href="/product/delete/{{ $product->id }}" class="btn btn-danger">Видалити</a>
                 </div>
             </div>
         </div>
