@@ -32,3 +32,6 @@ Route::any('product/create', 'ProductController@create')->name('product_create')
 Route::any('product/confirm', 'ProductController@confirm')->name('product_confirm');
 Route::any('product/update/{product}', 'ProductController@update')->name('product_update');
 Route::any('product/delete/{product}', 'ProductController@delete')->name('product_delete');
+
+
+//client route
