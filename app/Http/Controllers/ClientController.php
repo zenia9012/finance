@@ -25,8 +25,11 @@ class ClientController extends Controller
 			$name = $request->input('name');
 			$city = $request->input('city');
 			$notes = $request->input('notes');
+			$email = $request->input('email');
+			$phone = $request->input('phone');
+			$facebook = $request->input('facebook');
 
-			
+
 			Client::create($name, $city, $notes);
 
 			return redirect( route('client_list') );
@@ -39,7 +42,9 @@ class ClientController extends Controller
 
 	}
 
-	public function delete(  ) {
+	public function delete( Client $client ) {
+		Client::deleteItem( $client->id );
 
+		return redirect( route('client_list'));
 	}
 }
