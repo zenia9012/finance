@@ -29,4 +29,8 @@ class Product extends Model
 	public static function deleteItem( $id ) {
 		Product::where('id', '=', $id)->delete();
 	}
+
+	public function orders(  ) {
+		$this->hasMany(Order::class, 'product_id');
+	}
 }
