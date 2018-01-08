@@ -22,7 +22,7 @@ class CreateOrdersTable extends Migration
         	$table->string('deadline');
         	$table->decimal('amount');
         	$table->enum('status', ['new', 'complete', 'cancel']);
-        	$table->longText('notes');
+        	$table->longText('notes')->nullable();
         	$table->timestamps();
         });
     }
