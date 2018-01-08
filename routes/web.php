@@ -32,3 +32,11 @@ Route::any('product/create', 'ProductController@create')->name('product_create')
 Route::any('product/confirm', 'ProductController@confirm')->name('product_confirm');
 Route::any('product/update/{product}', 'ProductController@update')->name('product_update');
 Route::any('product/delete/{product}', 'ProductController@delete')->name('product_delete');
+
+
+//client route
+
+Route::any('client', 'ClientController@list')->name('client_list');
+Route::any('client/create', 'ClientController@create')->name('client_create');
+Route::any('client/update/{client}', 'ClientController@update')->name('client_update');
+Route::any('client/delete/{client}', 'ClientController@delete')->name('client_delete');
