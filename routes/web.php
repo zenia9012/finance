@@ -40,3 +40,11 @@ Route::any('client', 'ClientController@list')->name('client_list');
 Route::any('client/create', 'ClientController@create')->name('client_create');
 Route::any('client/update/{client}', 'ClientController@update')->name('client_update');
 Route::any('client/delete/{client}', 'ClientController@delete')->name('client_delete');
+
+
+//order route
+
+Route::any('order', 'OrderController@list')->name('order_list');
+Route::any('order/create', 'OrderController@create')->name('order_create');
+Route::any('order/update/{order}', 'OrderController@update')->name('order_update');
+Route::any('order/delete/{order}', 'OrderController@delete')->name('order_delete');
