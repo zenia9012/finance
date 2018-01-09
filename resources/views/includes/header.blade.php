@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
-                <li><a href="#">Замовлення</a></li>
+                <li><a href="{{ route('order_list') }}">Замовлення</a></li>
                 <li><a href="{{ route('product_list') }}">Товар</a></li>
                 <li><a href="{{ route('list_cost') }}">Витрати</a></li>
                 <li><a href="{{ route('client_list') }}">Клієнти</a></li>

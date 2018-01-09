@@ -51,7 +51,10 @@ class OrderController extends Controller
 		
     }
 
-	public function delete(  ) {
-		
+	public function delete( Order $order ) {
+
+		Order::deleteItem($order->id);
+
+		return redirect(route('order_list'));
     }
 }

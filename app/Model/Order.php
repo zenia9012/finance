@@ -30,4 +30,8 @@ class Order extends Model
 
 		$orders->save();
 	}
+
+	public static function deleteItem( $id ) {
+		Order::where('id', '=', $id)->delete();
+	}
 }
