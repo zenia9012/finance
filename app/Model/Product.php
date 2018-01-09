@@ -29,4 +29,12 @@ class Product extends Model
 	public static function deleteItem( $id ) {
 		Product::where('id', '=', $id)->delete();
 	}
+
+	public static function getById( $id ) {
+		return Product::where('id', '=', $id)->first();
+	}
+
+	public function orders(  ) {
+		$this->hasMany(Order::class, 'products_id','id');
+	}
 }

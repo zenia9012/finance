@@ -26,4 +26,12 @@ class Client extends Model
 	public static function deleteItem( $id ) {
 		Client::where('id', '=', $id)->delete();
 	}
+
+	public function orders(  ) {
+		return $this->hasMany(Order::class, 'client_id');
+	}
+
+	public static function getById( $id ) {
+		return Client::where('id', '=', $id)->first();
+	}
 }
