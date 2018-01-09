@@ -48,3 +48,4 @@ Route::any('order', 'OrderController@list')->name('order_list');
 Route::any('order/create', 'OrderController@create')->name('order_create');
 Route::any('order/update/{order}', 'OrderController@update')->name('order_update');
 Route::any('order/delete/{order}', 'OrderController@delete')->name('order_delete');
+Route::any('order/complete/{order}', 'OrderController@complete')->name('order_complete');

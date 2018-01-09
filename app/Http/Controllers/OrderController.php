@@ -98,7 +98,14 @@ class OrderController extends Controller {
 
 	public function delete( Order $order ) {
 
-		Order::deleteItem( $order->id );
+		Order::cancel( $order->id );
+
+		return redirect( route( 'order_list' ) );
+	}
+
+	public function complete( Order $order ) {
+
+		Order::complete( $order->id );
 
 		return redirect( route( 'order_list' ) );
 	}

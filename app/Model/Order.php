@@ -7,6 +7,9 @@ use Illuminate\Support\Carbon;
 
 class Order extends Model
 {
+	const STATUS_CANCEL = 'cancel';
+	const STATUS_COMPLETE = 'complete';
+
 	public function client(  ) {
 		$this->hasOne(Client::class);
     }
@@ -31,7 +34,15 @@ class Order extends Model
 		$orders->save();
 	}
 
-	public static function deleteItem( $id ) {
-		Order::where('id', '=', $id)->delete();
+	public static function cancel( $id ) {
+		$order = Order::where('id', '=', $id)->first();
+		$order->status = self::STATUS_CANCEL;
+		$order->save();
+	}
+
+	public static function complete( $id ) {
+		$order = Order::where('id', '=', $id)->first();
+		$order->status = self::STATUS_COMPLETE;
+		$order->save();
 	}
 }

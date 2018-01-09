@@ -20,6 +20,7 @@
                             <th>Нотатки</th>
                             <th width="5%"></th>
                             <th width="5%"></th>
+                            <th width="5%"></th>
                         </tr>
                         @foreach($orders as $order)
                             <tr>
@@ -30,8 +31,9 @@
                                 <td>{{ $order->amount }}</td>
                                 <td>{{ $order->status }}</td>
                                 <td>{{ $order->notes }}</td>
+                                <td><a href="/order/complete/{{ $order->id }}" class="btn btn-success btn-sm">Готово</a></td>
                                 <td><a href="/order/update/{{ $order->id }}" class="btn btn-warning btn-sm">Редагувати</a></td>
-                                <td><a href="/order/delete/{{ $order->id }}" class="btn btn-danger btn-sm">Видалити</a></td>
+                                <td><a href="/order/delete/{{ $order->id }}" class="btn btn-danger btn-sm">Відмінити</a></td>
                             </tr>
                         @endforeach
                     </table>
