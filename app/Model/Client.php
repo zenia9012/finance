@@ -30,4 +30,8 @@ class Client extends Model
 	public function orders(  ) {
 		return $this->hasMany(Order::class, 'client_id');
 	}
+
+	public static function getById( $id ) {
+		return Client::where('id', '=', $id)->first();
+	}
 }

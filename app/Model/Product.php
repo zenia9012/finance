@@ -30,7 +30,11 @@ class Product extends Model
 		Product::where('id', '=', $id)->delete();
 	}
 
+	public static function getById( $id ) {
+		return Product::where('id', '=', $id)->first();
+	}
+
 	public function orders(  ) {
-		$this->hasMany(Order::class, 'product_id');
+		$this->hasMany(Order::class, 'products_id','id');
 	}
 }

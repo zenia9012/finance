@@ -8,19 +8,19 @@ use Illuminate\Support\Carbon;
 class Order extends Model
 {
 	public function client(  ) {
-		$this->hasOne(Client::class, 'id', 'client_id');
+		$this->hasOne(Client::class);
     }
 
-	public function product(  ) {
-		$this->hasOne(Product::class, 'id', 'product_id');
+	public function products(  ) {
+		$this->hasOne(Product::class,'id', 'products_id');
     }
 
 	public static function create( $product, $client, $deadline, $amount, $status, $notes = null ) {
 
 		$orders = new Order();
 
-		$orders->product_id = $product;
-		$orders->client_id = $client;
+		$orders->products_id = $product;
+		$orders->clients_id = $client;
 		$orders->amount = $amount;
 		$orders->status = $status;
 		$orders->deadline = $deadline;

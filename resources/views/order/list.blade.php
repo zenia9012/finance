@@ -24,11 +24,11 @@
                         @foreach($orders as $order)
                             <tr>
                                 <td>{{ $order->id }}</td>
-                                <td>{{ $order->product_id }}</td>
-                                <td>{{ $order->client_id }}</td>
+                                <td>{{ $order->products_id }}</td>
+                                <td>{{ $order->clients_id }}</td>
                                 <td>{{ $order->deadline }}</td>
                                 <td>{{ $order->amount }}</td>
-                                <td>{{ $order->stutus }}</td>
+                                <td>{{ $order->status }}</td>
                                 <td>{{ $order->notes }}</td>
                                 <td><a href="/order/update/{{ $order->id }}" class="btn btn-warning btn-sm">Редагувати</a></td>
                                 <td><a href="/order/delete/{{ $order->id }}" class="btn btn-danger btn-sm">Видалити</a></td>
